@@ -34,8 +34,8 @@ To run this project, you will need to create a `.env` file in the root of your p
 
 1. Clone the repository: 
    ```bash
-   git clone https://github.com/NathanielMekonen/spotify-elt-pipeline.git
-   cd spotify-elt-pipeline
+   git clone https://github.com/NathanielMekonen/Spotify_ETL_Pipeline_Project.git
+   cd Spotify_ETL_Pipeline_Project
 
 2. Create a `.env` file in the root directory of the project and add your variables as specified in the Environment Variables section above.
 
