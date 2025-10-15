@@ -50,7 +50,7 @@ def get_auth_header(access_token):
 
 
 def extract_recently_played_tracks(access_token):
-    """Extract recently played tracks the since start of the day."""
+    """Extract recently played tracks for the past 12 hours."""
     timestamp_ms_12hrsago = int((time.time() - 12 * 60 * 60) * 1000)
     params = {
         'limit' : '50',
