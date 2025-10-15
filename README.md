@@ -9,7 +9,7 @@ The goal of this project is to build a data pipeline that extracts data on my re
 - **Data Storage:** Stores the cleaned data in a PostgreSQL database.
 - **Workflow Automation:** Uses Apache Airflow within a Docker container to orchestrate the pipeline and schedule it to run every 12 hours.
 
-![Project Diagram](images/Spotify_ETL_Diagram.jpg)
+<img width="2965" height="1349" alt="image" src="https://github.com/user-attachments/assets/97275a3f-5fc7-4097-ab52-36679a04987e" />
 
 ## Prerequisites
 
