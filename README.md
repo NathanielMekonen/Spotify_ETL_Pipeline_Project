@@ -1,4 +1,4 @@
-# Creating an ELT Pipeline with Spotify Data
+# Creating an ETL Pipeline with Spotify Data
 
 The goal of this project is to build a data pipeline that extracts data on my recently played Spotify songs, cleans it, and loads it into a PostgreSQL database twice a day. This database can then be used to run queries and perform analytics on my listening trends.
 
