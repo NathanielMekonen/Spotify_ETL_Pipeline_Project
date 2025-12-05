@@ -4,4 +4,4 @@ __pycache__/
 .env
 config/
 plugins/
-images/
+images/.DS_Store
