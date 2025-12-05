@@ -59,7 +59,7 @@ def extract_recently_played_tracks(access_token):
     headers = get_auth_header(access_token)
     result = requests.get(spofity_recently_played_url, params=params, headers=headers)
     json_result = result.json()
-    print(f'Successfully extracted your last {len(json_result['items'])} played tracks!')
+    print(f"Successfully extracted your last {len(json_result['items'])} played tracks!")
     return json_result
 
 
@@ -100,7 +100,7 @@ def transform(data, access_token):
     df['track_album_images'] = df['track_album_images'].apply(lambda x: x[0]['url'] if x else None)
 
     # Create a unique play ID
-    df['play_id'] = df['track_id'] + '_' + pd.to_datetime(df['played_at']).dt.strftime('%Y-%m-%d_%H:%M:%S')
+    df['play_id'] = df['track_id'] + '_' + pd.to_datetime(df['played_at'], format='ISO8601').dt.tz_convert('US/Central').dt.strftime('%Y-%m-%d %H:%M:%S')
 
     # Convert duration from ms to seconds
     df['track_length_seconds'] = df['track_duration_ms'] / 1000
@@ -109,7 +109,8 @@ def transform(data, access_token):
     df['track_album_release_date'] = pd.to_datetime(df['track_album_release_date'], errors='coerce')
 
     # Convert played_at to US/Central timezone and format string
-    df['played_at'] = pd.to_datetime(df['played_at'], utc=True).dt.tz_convert('US/Central').dt.strftime('%Y-%m-%d %H:%M:%S')
+    df['played_at'] = (pd.to_datetime(df['played_at'], format='ISO8601').dt.tz_convert('US/Central').dt.strftime('%Y-%m-%d %H:%M:%S')
+)
 
     cleaned_df = df[['play_id', 'track_id', 'track_name', 'track_length_seconds', 'track_popularity', 'played_at', 'context_type', 'track_album_name', 'track_album_images', 'track_album_album_type', 'track_album_release_date', 'artists', 'artist_id']]\
                     .rename(columns={
