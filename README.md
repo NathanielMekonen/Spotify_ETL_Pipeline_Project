@@ -52,5 +52,6 @@ To run this project, I needed to create an `.env` file in the root of my project
 
 ## Dashboard
 
-<img width="747" height="692" alt="Screen Shot 2026-01-12 at 3 39 12 PM" src="https://github.com/user-attachments/assets/c68c0204-2f0e-4973-8b9b-ea03b613fc54" />
+<img width="746" height="687" alt="Screen Shot 2026-01-12 at 3 43 48 PM" src="https://github.com/user-attachments/assets/add472ab-9d74-4b28-b4c3-70e53be1feeb" />
+
 
