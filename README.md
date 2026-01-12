@@ -1,6 +1,6 @@
 # Creating an ETL Pipeline with Spotify Data
 
-The goal of this project is to build a data pipeline that extracts data on my recently played Spotify songs, cleans it, and loads it into a PostgreSQL database twice a day. This database can then be used to run queries and perform analytics on my listening trends.
+The goal of this project was to build a data pipeline that extracts data on my recently played Spotify songs, cleans it, and loads it into a PostgreSQL database twice a day. This data was then queried to create an interactive dashboard that visualizes my listening trends over time.
 
 ## Project Features
 
@@ -8,6 +8,7 @@ The goal of this project is to build a data pipeline that extracts data on my re
 - **Data Cleaning:** Uses Python to clean and transform the retrieved data.
 - **Data Storage:** Stores the cleaned data in a PostgreSQL database.
 - **Workflow Automation:** Uses Apache Airflow within a Docker container to orchestrate the pipeline and schedule it to run every 12 hours.
+- **Data Visualization:** Utilizes Metabase to query data and build an interactive dashboard.
 
 <img width="2965" height="1349" alt="image" src="https://github.com/user-attachments/assets/97275a3f-5fc7-4097-ab52-36679a04987e" />
 
@@ -18,17 +19,17 @@ The goal of this project is to build a data pipeline that extracts data on my re
 
 ## Environment Variables
 
-To run this project, you will need to create a `.env` file in the root of your project folder with the following variables:
+To run this project, I needed to create an `.env` file in the root of my project folder with the following variables:
 
-- `CLIENT_ID`: Your Spotify client ID  
-- `CLIENT_SECRET`: Your Spotify client secret  
-- `AUTH_CODE`: Your authentication code provided after running the `authentication_code.py` script  
-- `REFRESH_TOKEN`: Your refresh token provided after running the `refresh_token.py` script  
-- `HOST`: Hostname for your PostgreSQL database  
-- `PORT`: Port number for your PostgreSQL database  
-- `DATABASE`: Name of your PostgreSQL database  
-- `USERNAME`: Username for accessing your PostgreSQL database  
-- `PASSWORD`: Password for your PostgreSQL database  
+- `CLIENT_ID`: My Spotify client ID  
+- `CLIENT_SECRET`: My Spotify client secret  
+- `AUTH_CODE`: My authentication code provided after running the `authentication_code.py` script  
+- `REFRESH_TOKEN`: My refresh token provided after running the `refresh_token.py` script  
+- `HOST`: Hostname for my PostgreSQL database  
+- `PORT`: Port number my your PostgreSQL database  
+- `DATABASE`: Name of my PostgreSQL database  
+- `USERNAME`: Username for accessing my PostgreSQL database  
+- `PASSWORD`: Password for my PostgreSQL database  
 
 ## Setup / Installation
 
@@ -48,3 +49,8 @@ To run this project, you will need to create a `.env` file in the root of your p
     docker-compose up --build
 
 6. Open your browser and access the Airflow UI at http://localhost:8080
+
+## Dashboard
+
+<img width="747" height="692" alt="Screen Shot 2026-01-12 at 3 39 12 PM" src="https://github.com/user-attachments/assets/c68c0204-2f0e-4973-8b9b-ea03b613fc54" />
+
